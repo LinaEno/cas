@@ -71,7 +71,7 @@ body {
 
 }
 
-main {
+.main {
     max-width: 1600px;
     margin: 0 auto;
     padding:  0 30px;
@@ -93,6 +93,14 @@ main {
     gap: 16px;
     position: relative;
     margin-bottom: 20px;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 h1 {
@@ -150,88 +158,126 @@ p {
     line-height: 20.48px;
     text-transform: uppercase;
     color: rgba(253, 253, 253, 1);
-    padding: 14px 32px;
     background: rgba(46, 147, 68, 1);
     border: none;
     outline: none;
     transition: all 0.3s linear;
 }
-.btn-red {
+.red {
     background: rgba(255, 73, 73, 1);
     width: 278px;
+}
+.burger-menu {
+  display: none;
+}
 
-
+.header__button {
+  height: 32px;
+  width: 32px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.41px;
+  text-align: center;
+  background: #ffffff2b;
 }
 
 .button:hover {
     opacity: 0.9;
 }
 
+.login-button {
+  width: 88px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.41px;
+  height: 32px;
+}
+.register-button {
+  width: 152px;
+  background: #41b15b;
+  color: #ffffff;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.41px;
+  height: 32px;
+}
+.register-button:hover {
+  box-shadow: 0 0 5px #41b15b;
+}
 
-.casino__box {
+.features__title {
+    background: linear-gradient(90deg, #054146 0%, #0CA0AC 100%);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.8px;
+    text-align: left;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-transform: uppercase;
+}
+.features__box {
     display: flex;
     gap: 20px;
 
 }
-.casino__box ul {
+.features__box ul {
     display: flex;
     flex-direction: column;
     border: 2px solid rgba(10, 114, 123, 1);
     width: calc(50% - 10px);
     border-radius: 6px;
 }
+.features__box ul li {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  display: flex;
+  gap: 20px;
+  height: 46px;
+  position: relative;
+}
+.features__box ul:first-child li  {
+  padding: 11px 20px 11px 54px;
+}
+.features__box ul:first-child li::before {
+  content: url(./img/bullet.svg);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  width: 24px;
+  height: 24px;
+}
+.features__box ul:first-child li strong {
+  font-weight: 700;
+  min-width: 100%;
+}
+.features__box ul:last-child li  {
+  padding: 12px 20px;
+}
+.features__box ul:last-child li strong {
+  font-weight: 700;
+  min-width: calc(50% - 10px);
+}
+.features__list li:not(:last-child) {
+  border-bottom: 2px solid rgba(10, 114, 123, 1);
+}
 
-.casino__list1 li {
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 22px;
-    text-align: left;
-    position: relative;
-    padding: 11px 20px 11px 64px;
-    height: 46px;
-}
-.casino__list1 li:not(:last-child) {
-    border-bottom: 2px solid rgba(10, 114, 123, 1);
-}
-
-.casino__list1 li::before {
-    content: url(./img/bullet.svg);
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 20px;
-    width: 24px;
-    height: 24px;
-}
-
-.casino__list2 li {
-    padding: 12px 20px;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 22px;
-    display: flex;
-    gap: 20px;
-    height: 46px;
-}
-.casino__list2 li:not(:last-child) {
-    border-bottom: 2px solid rgba(10, 114, 123, 1);
-}
-.casino__list2 li strong {
-    font-weight: 700;
-    min-width: calc(50% - 10px);
-
-}
 
 .banner {
     padding: 111px 0 110px 48px;
     position: relative;
     border-radius: 6px;
 }
-.banner__box {
+.banner__wrapper {
     max-width: 355px;
     position: relative;
 }
-.banner__box h2 {
+.banner__wrapper-title {
     font-size: 26px;
     font-weight: 700;
     line-height: 31.2px;
@@ -241,7 +287,7 @@ p {
     background: transparent;
 
 }
-.banner__box h4 {
+.banner__wrapper-subtitle {
     font-size: 18px;
     font-weight: 700;
     line-height: 21.09px;
@@ -251,7 +297,7 @@ p {
     text-transform: uppercase;
 
 }
-.banner__box p {
+.banner__wrapper-text {
     font-size: 10px;
     font-weight: 400;
     line-height: 15px;
@@ -259,16 +305,17 @@ p {
     margin-top: 8px;
     color: #fff;
 }
-.banner img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.banner__image {
+
     border-radius: 6px;
 }
-.banner__btn {
+.banner__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.banner__button {
     margin: 0 auto;
 }
 
@@ -313,7 +360,7 @@ p {
     line-height: 24px;
     
 }
-.rating__title {
+.rating-item__title {
     min-width: 187px;
     margin-right: 58px;
 }
@@ -409,13 +456,10 @@ linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
     margin-bottom: 20px;
     margin-top: 60px;
   }
-  .hero img {
+  .hero__image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
   }
   .hero__rating {
     color: rgba(255, 255, 255, 0.8);
@@ -432,18 +476,18 @@ linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
     gap: 0;
   }
   .hero__subtitle {
-font-size: 15px;
-line-height: 17.58px;
-max-width: 360px;
-margin-bottom: 16px;
-color: #fff;
+    font-size: 15px;
+    line-height: 17.58px;
+    max-width: 360px;
+    margin-bottom: 16px;
+    color: #fff;
   }
   .hero__text {
-font-size: 10px;
-line-height: 15px;
-margin-left: 15px;
-color: #fff;
-margin-top: 8px;
+    font-size: 10px;
+    line-height: 15px;
+    margin-left: 15px;
+    color: #fff;
+    margin-top: 8px;
 
   }
 
@@ -454,25 +498,25 @@ margin-top: 8px;
 }
 
 
-  .aside {
+  .sidebar {
     width: 239px;
     width: 16%;
     flex-shrink: 0;
     position: relative;
     
   }
-  .aside__right {
+  .sidebar__banner {
     position: sticky;
     top: 80px;
     left: 0;
     width: 100%;
   }
-  .aside__right img {
+  .sidebar__banner img {
     width: 100%;
     height: auto;
     object-fit: cover;
   }
-  .aside__left {
+  .sidebar__left {
     border-radius: 3px;
     background-color: #fff;    
     position: sticky;
@@ -480,7 +524,7 @@ margin-top: 8px;
     left: 0;
     width: 100%;
   }
-  .aside__left-header {
+  .sidebar__left-header {
     cursor: pointer;
     font-size: 14px;
     font-weight: 700;
@@ -493,7 +537,7 @@ margin-top: 8px;
     border-radius: 3px 3px 0 0;
 
   }
-  .aside__left-header::after {
+  .sidebar__left-header::after {
     content: url('../img/Button.svg');
     width: 13px;
     height: 13px;
@@ -502,19 +546,19 @@ margin-top: 8px;
     top: 9px;
   }
 
-  .aside__left-list {
+  .sidebar__left-list {
     height: 0;
     overflow: hidden;
     opacity: 0;
     transition: all 0.3s ease;
   }
 
-  .aside__left-list.active {
+  .sidebar__left-list.active {
     height: 265px;
     opacity: 1;
   }
 
-  .aside__left-list li a {
+  .sidebar__left-list li a {
     font-size: 14px;
     font-weight: 300;
     line-height: 16px;
@@ -525,14 +569,14 @@ margin-top: 8px;
     display: block;
     transition: all 0.3s ease;
   }
-  .aside__left ul li a:hover {
+  .sidebar__left ul li a:hover {
     background: rgba(220, 230, 234, 1);
   }
-  .aside__left ul li:not(:last-child) {
+  .sidebar__left ul li:not(:last-child) {
     border-bottom: 1px solid rgba(241, 243, 245, 1)
 
   }
-  .aside__left ul li a::before {
+  .sidebar__left ul li a::before {
     content: "";
     position: absolute;
     width: 3px;
@@ -544,7 +588,7 @@ margin-top: 8px;
     transform: translateY(-50%);
   }
 
-  .btn-up {
+  .button-up {
     position: absolute;
     bottom: 30px;
     right: 228px;
@@ -586,12 +630,9 @@ margin-top: 8px;
     display: flex;
     align-items: center;
   }
-  .header__logo a {
-    display: flex;
-    align-items: center;
-  }
+
   
-  .header__nav ul {
+  .header__menu ul {
     display: flex;
     max-width: 466px;
     align-items: center;
@@ -599,7 +640,7 @@ margin-top: 8px;
     gap: 30px;
     margin: 0 20px;
   }
-  .header__nav a {
+  .header__menu a {
     font-family: Roboto;
     font-size: 14px;
     font-weight: 600;
@@ -607,7 +648,7 @@ margin-top: 8px;
     text-align: left;
     text-transform: uppercase;
   }
-  .header__nav a:hover {
+  .header__menu a:hover {
     text-shadow: 0 0 5px #41b15b;
   }
   
@@ -618,36 +659,8 @@ margin-top: 8px;
     gap: 10px;
     margin-left: auto;
   }
-  .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 32px;
-    min-width: 32px;
-    border-radius: 3px;
-    font-family: Roboto;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16.41px;
-    text-align: center;
-    border: none;
-    background: #ffffff2b;
-    text-transform: uppercase;
-  }
-  .btn:hover {
-    box-shadow: 0 0 5px #ffffff2b;
-  }
-  .login-btn {
-    min-width: 88px;
-  }
-  .register-btn {
-    min-width: 152px;
-    background: #41b15b;
-    color: #ffffff;
-  }
-  .register-btn:hover {
-    box-shadow: 0 0 5px #41b15b;
-  }
+
+
   .header__selected-language {
     display: flex;
     align-items: center;
@@ -657,7 +670,7 @@ margin-top: 8px;
     line-height: 20.48px;
     color: #ffffff;
   }
-  #clock {
+  .header__clock {
     font-family: Roboto;
     font-size: 13px;
     font-weight: 400;
@@ -904,7 +917,7 @@ margin-top: 8px;
     text-align: center;
   }
 
-  .burger-btn {
+  .burger-button {
     display: none;
   }
 
@@ -928,12 +941,12 @@ margin-top: 8px;
     }
   }
   @media screen and (max-width: 1258px) {
-    .aside__left-list.active {
+    .sidebar__left-list.active {
         height: 280px;
     }
   }
   @media screen and (max-width: 1200px) {
-    .aside {
+    .sidebar {
         display: none;
     }
     .content, .container {
@@ -943,13 +956,13 @@ margin-top: 8px;
     .hero .container {
         padding: 0 30px;
     }
-    .btn-up {
+    .button-up {
         right: 10px;
         background-color: rgba(5, 65, 70, 1);
         border-radius: 50%;
 
     }
-    .btn-up img {
+    .button-up img {
         width: 30px;
         height: 30px;
     }
@@ -971,13 +984,19 @@ margin-top: 8px;
   }
 
   @media screen and (max-width: 1000px) {
-    .header__nav {
+    .header__menu {
       display: none;
     }
-    .header__right .btn {
+    .header__right .header__button {
       display: none;
     }
-    .burger-btn {
+    .header__right .register-button {
+      display: none;
+    }
+    .header__right .login-button {
+      display: none;
+    }
+    .burger-button {
       display: flex;
       margin-left: auto;
         flex-direction: column;
@@ -989,20 +1008,20 @@ margin-top: 8px;
         cursor: pointer;
         z-index: 2; 
     }
-    .burger-btn span {
+    .burger-button span {
       width: 30px;
       height: 3px;
       background-color: #fff;
       transition: all 0.3s ease;
     }
-    .burger-btn.open span:nth-child(1) {
+    .burger-button.open span:nth-child(1) {
       transform: translateY(8px) rotate(45deg);
     }
     
-    .burger-btn.open span:nth-child(2) {
+    .burger-button.open span:nth-child(2) {
       opacity: 0;
     }
-      .burger-btn.open span:nth-child(3) {
+    .burger-button.open span:nth-child(3) {
       transform: translateY(-12px) rotate(-45deg);
     }
     .burger-menu {
@@ -1016,6 +1035,7 @@ margin-top: 8px;
       transition: right 0.3s ease; 
       color: #fff;
       overflow-y: auto;
+      display: block;
     }
     .burger-menu.open {
       right: 0; 
@@ -1035,45 +1055,45 @@ margin-top: 8px;
       font-weight: 500;
       text-transform: uppercase;
     }
-    .burger-menu__btns {
+    .burger-menu__buttons {
       display: flex;
       flex-direction: column;
       gap: 16px;
       align-items: center;
       margin-top: 20px;
     }
-    .burger-menu__btns a {
+    .burger-menu__buttons a {
       width: 300px;
     }
   }
 
   @media screen and (max-width: 880px) {
-    .casino__box {
+    .features__box {
       flex-direction: column;
     }
-    .casino__box ul {
+    .features__box ul {
       width: 100%;
     }
-    .casino__list1 li {
+    .features__list:first-child li {
       font-size: 14px;
       padding: 8px 16px 8px 64px;
       height: auto;
   }
-    .casino__list2 li {
+    .features__list:last-child li {
       font-size: 14px;
       padding: 8px 16px 8px 16px;
       height: auto;
       justify-content: space-between;
   }
-  .casino__list2 li strong {
+  .features__list:last-child li strong {
     min-width: auto;
 }
   }
   @media screen and (max-width: 848px) {
-    main {
+    .main {
         padding: 0 8px;
     }
-    .rating__title {
+    .rating-item__title {
         min-width: 150px;
         margin-right: 10px;
     }
@@ -1125,7 +1145,7 @@ display: none;
 .footer-part__middle-right {
   width: 100%;
 }
-.hero img {
+.hero__image {
 position: static;
 width: 100%;
 height: auto;
@@ -1175,10 +1195,10 @@ margin-bottom: 20px;
     .header__container {
       padding: 0 10px;
     }
-    .burger-menu__btns a {
+    .burger-menu__buttons a {
       width: 100%;
     }
-    .banner__box {
+    .banner__wrapper {
       max-width: 100%;
     }
     .hero__text {

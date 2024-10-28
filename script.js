@@ -3,8 +3,8 @@ if (document.querySelector('.accordion-container')) {
   }
 
 
-const asideBtn = document.querySelector('.aside__left-header');
-const asideList = document.querySelector('.aside__left-list');
+const asideBtn = document.querySelector('.sidebar__left-header');
+const asideList = document.querySelector('.sidebar__left-list');
 
 if(asideBtn) {
   asideBtn.addEventListener('click', () => {
@@ -18,7 +18,7 @@ function updateClock() {
   const hours = String(now.getHours()).padStart(2, '0');
   const minutes = String(now.getMinutes()).padStart(2, '0');
 
-  document.getElementById('clock').textContent = `${hours}:${minutes}`;
+  document.querySelector('.header__clock').textContent = `${hours}:${minutes}`;
 }
 
 setInterval(updateClock, 1000);
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-const scrollToTopButton = document.querySelector('.btn-up');
+const scrollToTopButton = document.querySelector('.button-up');
 
 window.addEventListener('scroll', function() {
   if (window.pageYOffset > 300) {

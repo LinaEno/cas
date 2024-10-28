@@ -17,12 +17,10 @@
 
   <header class="header">
     <div class="header__container">
-      <div class="header__logo">
-        <a href="#"
+        <a href="#" class="header__logo"
           ><img width="113" height="24" src="img/logo2.svg" alt="logo"
         /></a>
-      </div>
-      <nav class="header__nav">
+      <nav class="header__menu">
         <ul>
           <li><a href="#">Bonuses</a></li>
 
@@ -34,37 +32,37 @@
         </ul>
       </nav>
       <div class="header__right">
-        <a href="#" class="btn"
+        <a href="#" class="button header__button"
           ><img
             width="16"
             height="8.8"
             src="img/android.svg"
             alt="button icon"
         /></a>
-        <a href="#" class="btn"
+        <a href="#" class="button header__button"
           ><img
             width="8"
             height="16"
             src="img/dollar.svg"
             alt="button icon"
         /></a>
-        <a href="#" class="btn"
+        <a href="#" class="button header__button"
           ><img
             width="16"
             height="15"
             src="img/gift.svg"
             alt="button icon"
         /></a>
-        <a href="#" class="btn"
+        <a href="#" class="button header__button"
           ><img
             width="14.23"
             height="16"
             src="img/award.svg"
             alt="button icon"
         /></a>
-        <a href="#" class="btn register-btn">Registration</a>
-        <a href="#" class="btn login-btn">Log In</a>
-        <div id="clock"></div>
+        <a href="#" class="button register-button">Registration</a>
+        <a href="#" class="button login-button">Log In</a>
+        <div  class="header__clock"></div>
         <div class="header__lang-switcher">
           <div class="header__selected-language" id="selectedLanguage">
             En <img src="img/arrow.svg" alt="icon" width="20" height="20">
@@ -84,7 +82,7 @@
             </li>
           </ul>
         </div>
-        <button class="burger-btn" id="burgerBtn">
+        <button class="burger-button" id="burgerBtn">
           <span></span>
           <span></span>
           <span></span>
@@ -92,8 +90,11 @@
       </div>
     </div>
   </header>
+  <main>
     <section class="hero">
-      <img src="img/hero.png" alt="hero img">
+      <div class="image hero__image">
+        <img src="img/hero.png" alt="hero img">
+      </div>
         <div class="container">
           <p class="hero__rating" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
             Overall Rating <span><span itemprop="ratingValue">91</span>/100</span>
@@ -104,15 +105,16 @@
             A 20Bet apostas online é a novidade mais relevante no&nbsp;mercado de
             apostas do Brasil
           </p>
-          <button class="button btn-red">Obter um Bônus</button>
+          <button class="button red">Obter um Bônus</button>
           <p class="hero__text">18+ T&C apply | begambleaware.org | Play Responsibly</p>
         </div>
     </section>
-    <main>
-        <aside class="aside">
-        <div class="aside__left">
-          <p class="aside__left-header">Lorem Ipsum</p>
-          <ul class="aside__left-list active">
+
+    <div class="main">
+        <aside class="sidebar">
+        <div class="sidebar__left">
+          <p class="sidebar__left-header">Lorem Ipsum</p>
+          <ul class="sidebar__left-list active">
             <li>
               <a href="#">
                 Review of 20Bet
@@ -157,22 +159,22 @@
         </div>
         </aside>
         <div class="content">
-          <article class="container">
+        <section class="container">
             <p>Formidabile sito di scommesse online, con 22Bet potrete realizzare i vostri desideri, trasformando il vostro hobby preferito in una fonte di guadagno. Questo allibratore è esperto di servizi di casinò e sportsbook, consentendo a chiunque lo utilizzi di scegliere l’esperienza di gioco che più li gratifichi.</p>
             <p>Si possono effettuare scommesse in pochi clic e bastano appena 24 ore per ricevere il denaro vinto.</p>
-        </article>
-        <section class="container casino">
-            <h2>20Bet Brasil: Casa de Aposta e Cassino</h2>
-            <div class="casino__box">
-                <ul class="casino__list1">
-                    <li>Huge variety of Sports to Bet On</li>
-                    <li>Wide amount of Deposit Methods</li>
-                    <li>1000+ Casino Games from Best Providers</li>
-                    <li>Generous Winnings and Jackpots</li>
-                    <li>Mobile Apps for iOS and Android</li>
-                    <li>Largest selection of Live Betting Games</li>
+        </section>
+        <section class="container features">
+            <h2 class="features__title">20Bet Brasil: Casa de Aposta e Cassino</h2>
+            <div class="features__box">
+                <ul class="features__list">
+                    <li><strong>Huge variety of Sports to Bet On</strong></li>
+                    <li><strong>Wide amount of Deposit Methods</strong></li>
+                    <li><strong>1000+ Casino Games from Best Providers</strong></li>
+                    <li><strong>Generous Winnings and Jackpots</strong></li>
+                    <li><strong>Mobile Apps for iOS and Android</strong></li>
+                    <li><strong>Largest selection of Live Betting Games</strong></li>
                 </ul>
-                <ul class="casino__list2">
+                <ul class="features__list">
                     <li><strong>Online slots</strong>2000+</li>
                     <li><strong>Biggest casino bonus</strong>2000+</li>
                     <li><strong>Min. deposit</strong>CA$1 - CA$20</li>
@@ -184,21 +186,23 @@
             </div>
         </section>
         <section class="container banner">
+          <div class="image banner__image">
             <img src="img/img3.png" alt="banner">
-            <div class="banner__box">
-                <h2>100% BONUS UP TO 300€</h2>
-                <h4>+100 free spins on your first deposit</h4>
-                <button class="button btn-red banner__btn">Obter um Bônus</button>
-                <p>18+ T&C apply | begambleaware.org | Play Responsibly</p>
+          </div>
+            <div class="banner__wrapper">
+                <h2 class="banner__wrapper-title">100% BONUS UP TO 300€</h2>
+                <h4 class="banner__wrapper-subtitle">+100 free spins on your first deposit</h4>
+                <button class="button red banner__button">Obter um Bônus</button>
+                <p class="banner__wrapper-text">18+ T&C apply | begambleaware.org | Play Responsibly</p>
             </div>
         </section>
-        <article class="container">
+        <section class="container">
             <h2>20Bet Brasil: Casa de Aposta e Cassino</h2>
             <img src="img/img1.png" alt="img">
             <p>Formidabile sito di scommesse online, con 22Bet potrete realizzare i vostri desideri, trasformando il vostro hobby preferito in una fonte di guadagno. Questo allibratore è esperto di servizi di casinò e sportsbook, consentendo a chiunque lo utilizzi di scegliere l’esperienza di gioco che più li gratifichi.</p>
             <p>Si possono effettuare scommesse in pochi clic e bastano appena 24 ore per ricevere il denaro vinto.</p>
-        </article>
-        <article class="container betting">
+        </section>
+        <section class="container betting">
             <h2>20Bet Brasil: Casa de Aposta e Cassino</h2>
             <p class="big-text">Formidabile sito di scommesse online, con 22Bet potrete realizzare i vostri desideri, trasformando il vostro hobby preferito in una fonte di guadagno. Questo allibratore è esperto di servizi di casinò e sportsbook, consentendo a chiunque lo utilizzi di scegliere l’esperienza di gioco che più li gratifichi.</p>
             <ul>
@@ -208,26 +212,26 @@
             </ul>
             <p>Si possono effettuare scommesse in pochi clic e bastano appena 24 ore per ricevere il denaro vinto.</p>
             <button class="button">Obter um Bônus</button>
-        </article>
+        </section>
         <article class="container">
             <h2>20Bet Brasil: Casa de Aposta e Cassino</h2>
             <img src="img/img2.png" alt="img">
             <p>Formidabile sito di scommesse online, con 22Bet potrete realizzare i vostri desideri, trasformando il vostro hobby preferito in una fonte di guadagno. Questo allibratore è esperto di servizi di casinò e sportsbook, consentendo a chiunque lo utilizzi di scegliere l’esperienza di gioco che più li gratifichi.</p>
             <p>Si possono effettuare scommesse in pochi clic e bastano appena 24 ore per ricevere il denaro vinto.</p>
         </article>
-        <article class="container">
+        <section class="container">
             <h2>20Bet Brasil: Casa de Aposta e Cassino</h2>
             <p>Formidabile sito di scommesse online, con 22Bet potrete realizzare i vostri desideri, trasformando il vostro hobby preferito in una fonte di guadagno. Questo allibratore è esperto di servizi di casinò e sportsbook, consentendo a chiunque lo utilizzi di scegliere l’esperienza di gioco che più li gratifichi.</p>
             <h3>20Bet Brasil: Casa de Aposta e Cassino</h3>
             <p>Si possono effettuare scommesse in pochi clic e bastano appena 24 ore per ricevere il denaro vinto.</p>
-        </article>
+        </section>
         <section class="container rating" itemscope itemtype="https://schema.org/WebPage">
-            <h2>
+            <h2 class="rating__title">
                 Ratings of 20Bet Services
             </h2>
             <ul class="rating__list">
-              <li itemprop="aggregateRating" itemscope itemtype="https://schema.org/Rating">
-                <span class="rating__title">Sports Betting:</span>
+              <li class="rating__item" itemprop="aggregateRating" itemscope itemtype="https://schema.org/Rating">
+                <span class="rating-item__title">Sports Betting:</span>
                 <ul class="rating__stars">
                   <li>
                     <img src="img/coin.svg" alt="coin icon">
@@ -261,8 +265,8 @@
                 <span class="rating__vlue"><span itemprop="ratingValue">9</span>/10</span>
                 <meta itemprop="bestRating" content="10" />
               </li>
-              <li itemprop="aggregateRating" itemscope itemtype="https://schema.org/Rating">
-                <span class="rating__title">Casino Games:</span>
+              <li class="rating__item" itemprop="aggregateRating" itemscope itemtype="https://schema.org/Rating">
+                <span class="rating-item__title">Casino Games:</span>
                 <ul class="rating__stars">
                   <li>
                     <img src="img/coin.svg" alt="coin icon">
@@ -281,8 +285,8 @@
                 <span class="rating__vlue"><span itemprop="ratingValue">4</span>/10</span>
                 <meta itemprop="bestRating" content="10" />
               </li>
-              <li itemprop="aggregateRating" itemscope itemtype="https://schema.org/Rating">
-                <span class="rating__title">Welcome Bonus:</span>
+              <li class="rating__item" itemprop="aggregateRating" itemscope itemtype="https://schema.org/Rating">
+                <span class="rating-item__title">Welcome Bonus:</span>
                 <ul class="rating__stars">
                   <li>
                     <img src="img/coin.svg" alt="coin icon">
@@ -309,8 +313,8 @@
                 <span class="rating__vlue"><span itemprop="ratingValue">7</span>/10</span>
                 <meta itemprop="bestRating" content="10" />
               </li>
-              <li itemprop="aggregateRating" itemscope itemtype="https://schema.org/Rating">
-                <span class="rating__title">Weekly Promotions:</span>
+              <li class="rating__item" itemprop="aggregateRating" itemscope itemtype="https://schema.org/Rating">
+                <span class="rating-item__title">Weekly Promotions:</span>
                 <ul class="rating__stars">
                   <li>
                     <img src="img/coin.svg" alt="coin icon">
@@ -346,8 +350,8 @@
                 <span class="rating__vlue"><span itemprop="ratingValue">10</span>/10</span>
                 <meta itemprop="bestRating" content="10" />
               </li>
-              <li itemprop="aggregateRating" itemscope itemtype="https://schema.org/Rating">
-                <span class="rating__title">Customer Support:</span>
+              <li class="rating__item" itemprop="aggregateRating" itemscope itemtype="https://schema.org/Rating">
+                <span class="rating-item__title">Customer Support:</span>
                 <ul class="rating__stars">
                   <li>
                     <img src="img/coin.svg" alt="coin icon">
@@ -377,8 +381,8 @@
                 <span class="rating__vlue"><span itemprop="ratingValue">8</span>/10</span>
                 <meta itemprop="bestRating" content="10" />
               </li>
-              <li itemprop="aggregateRating" itemscope itemtype="https://schema.org/Rating">
-                <span class="rating__title">Banking Options:</span>
+              <li class="rating__item" itemprop="aggregateRating" itemscope itemtype="https://schema.org/Rating">
+                <span class="rating-item__title">Banking Options:</span>
                 <ul class="rating__stars">
                   <li>
                     <img src="img/coin.svg" alt="coin icon">
@@ -415,46 +419,46 @@
             <button class="button">Obter um Bônus</button>
         </section>
         <section class="container faq">
-            <h2>
+            <h2 class="faq__title">
                 Frequently Asked Questions
             </h2>
             <div class="faq__accordion">
                 <div class="accordion-container" itemscope itemtype="https://schema.org/FAQPage">
                   <div class="ac" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
-                    <h2 class="ac-header" itemprop="name">
+                    <h3 class="ac-header" itemprop="name">
                       <button
                         type="button"
                         class="ac-trigger"
                       >
                       1. A 20Bet é legalizada no Brasil?
                       </button>
-                    </h2>
+                    </h3>
                     <div class="ac-panel" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                         <p>Sim, a casa de apostas tem licença emitida por Curaçao, que é reconhecida no Brasil e a permite atuar por aqui.</p>
                     </div>
                   </div>
                   <div class="ac" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
-                    <h2 class="ac-header" itemprop="name">
+                    <h3 class="ac-header" itemprop="name">
                       <button
                         type="button"
                         class="ac-trigger"
                       >
                       2. Existe aplicativo da 20Bet?
                       </button>
-                    </h2>
+                    </h3>
                     <div class="ac-panel" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                         <p>TSim, disponível para sistemas operacionais iOS e Android.</p>
                     </div>
                   </div>
                   <div class="ac" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
-                    <h2 class="ac-header" itemprop="name">
+                    <h3 class="ac-header" itemprop="name">
                       <button
                         type="button"
                         class="ac-trigger"
                       >
                       3. Tem bônus de boas-vindas na 20Bet?
                       </button>
-                    </h2>
+                    </h3>
                     <div class="ac-panel" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                         <p>O pacote especial para novos usuários da 20Bet paga 100% sobre o primeiro depósito, com limite de 600 BRL.</p>
                     </div>
@@ -462,15 +466,18 @@
                 </div>
             </div>
         </section>
-        <button class="btn-up">
+        <button class="button-up">
           <img src="img/btn-up.svg" alt="icon">
         </button>
         </div>
-        <aside class="aside">
-          <div class="aside__right">
+        <aside class="sidebar">
+          <div class="sidebar__banner">
             <img src="img/mobile-app.png" alt="mobile app image">
           </div>
         </aside>
+    </div>
+
+
 
     </main>
     <footer class="footer">
@@ -667,9 +674,9 @@
           </a>
         </li>
       </ul>
-      <div class="burger-menu__btns">
-        <a href="#" class="btn register-btn">Registration</a>
-        <a href="#" class="btn login-btn">Log In</a>
+      <div class="burger-menu__buttons">
+        <a href="#" class="button register-button">Registration</a>
+        <a href="#" class="button login-button">Log In</a>
       </div>
     </div>
     <script src="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.js"></script>
